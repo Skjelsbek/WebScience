@@ -1,14 +1,93 @@
-section {
-  text-align: center;
-  width: 100%;
+body {
+  font: 15px/1.5 Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: #f4f4f4;
+  font-size: 16px;
+}
+
+header {
+  background: #3a3a3a;
+  color: #ffffff;
+  border-bottom: orange 3px solid;
 }
 
 .container {
   width: 80%;
   margin: auto;
+  overflow: hidden;
 }
 
-section .container h1 {
-  float: left;
+#branding {
+    float: left;
+}
+
+#branding h1 {
   margin: 0;
+}
+
+#branding a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+#highlight {
+  color: orange;
+}
+
+header nav {
+  float: right;
+  text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 20px;
+  text-decoration: none; /* Removes link underlines */
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: orange;
+  color: black;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.drop-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+}
+
+.drop-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+.drop-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .drop-content {
+  display: block;
 }
