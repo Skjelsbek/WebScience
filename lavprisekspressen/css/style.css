@@ -1,0 +1,14 @@
+section {
+  text-align: center;
+  width: 100%;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+section .container h1 {
+  float: left;
+  margin: 0;
+}
