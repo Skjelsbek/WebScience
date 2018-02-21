@@ -22,5 +22,6 @@
       break;
   }
 
+  require_once 'html/news.html';
   require_once 'html/footer.html';
 ?>
