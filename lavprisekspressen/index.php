@@ -22,6 +22,6 @@
       break;
   }
 
-  require_once 'html/news.html';
-  require_once 'html/footer.html';
+  require_once './php/news.php';
+  require_once './html/footer.html';
 ?>

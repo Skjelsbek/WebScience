@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <title>Lavprisekspressen</title>
     <link href="./css/style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../scripts/script.js"></script>
+
+    </script>
   </head>
 
   <body>
@@ -19,7 +23,27 @@
 
         <nav id="topics">
           <ul>
-            <li><a href="?page=home">Home</a></li>
+            <!-- <li class="dropdown"> -->
+            <li class="dropdown">
+              <!-- <button id="loginbtn" class="dropbtn">Logg Inn</button> -->
+              <button id="loginbtn">Logg Inn</button>
+                <div id="login_drop">
+                  <form id="login_form" action="../php/login.php" method="post">
+                      <input type="email" placeholder="E-post addresse" name="email">
+                      <input type="password" placeholder="Passord" name="passwd">
+                      <input id="btn1" type="submit" value="Logg Inn">
+                  </form>
+                  <button id="rbtn">Registrer</button>
+
+                  <form id="registration_form" action="../php/register.php" method="post">
+                    <input type="text" placeholder="Brukernavn" name="uname">
+                    <input type="email" placeholder="E-post addresse" name="email">
+                    <input type="password" placeholder="Passord" name="passwd">
+                    <input id="btn2" type="submit" value="Registrer">
+                  </form>
+                  <button id="lbtn">Logg Inn</button>
+                </div>
+            </li>
             <li><a href="?page=rutetider">Rutetider</a></li>
             <li class="dropdown">
               <a class="dropbtn" href="?page=info">Info</a>
@@ -30,7 +54,7 @@
                 <a href="?page=om_oss">Om oss</a>
                 <a href="?page=q&a">Q&A</a>
                 <a href="?page=reiseguider">Reiseguider</a>
-                <a href="?page=våre_busser">Våre busser</a>              
+                <a href="?page=våre_busser">Våre busser</a>
               </div>
             </li>
           </ul>

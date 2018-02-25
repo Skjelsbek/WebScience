@@ -1,10 +1,9 @@
 /* Global */
 body {
-  font: 15px/1.5 Arial, Helvetica, sans-serif;
+  font: 16px/1.5 Arial, Helvetica, sans-serif;
   padding: 0;
   margin: 0;
   background-color: #f4f4f4;
-  font-size: 16px;
 }
 
 header {
@@ -72,9 +71,9 @@ li a, .dropbtn {
   text-decoration: none;
 }
 
-li a:hover, .dropdown:hover .dropbtn {
-  background-color: orange;
-  color: black;
+li a:hover, .dropdown:hover .dropbtn, .dropdown:hover #loginbtn {
+  background-color: orange !important;
+  color: black !important;
 }
 
 li.dropdown {
@@ -87,6 +86,7 @@ li.dropdown {
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+  z-index: 1;
 }
 
 .drop-content a {
@@ -105,16 +105,106 @@ li.dropdown {
   display: block;
 }
 
-/* news article */
-#news {
-  background-color: #000;
-  height: 300px;
+/* Login */
+#login_drop {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+  z-index: 1;
 }
 
-#news_background {
+#loginbtn {
+  background-color: #181b2b;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  outline:none;
+  padding: 10px 20px;
+  display: inline-block;
+  text-align: center;
+  font-size: 16px;
+  height: 44px;
+  font: 15px/1.5 Arial, Helvetica, sans-serif;
+}
+
+#login_form, #registration_form {
+  display: inline;
+}
+
+#login_form input[type=email],
+#login_form input[type=password],
+#registration_form input[type=email],
+#registration_form input[type=password],
+#registration_form input[type=text] {
+  height: 30px;
+  font-size: 16px;
+  margin: 5px;
+  display: block;
+}
+#btn1, #btn2 {
+  float: left;
+  width: 45%;
+  height: 30px;
+  font-size: 16px;
+  margin: 0 5px 5px 5px;
+}
+#rbtn, #lbtn {
+  display: inline;
+  float:right;
+  width: 45%;
+  height: 30px;
+  font-size: 16px;
+  margin: 0 5px 5px 5px;
+}
+
+#registration_form {
+  display: none;
+}
+
+#lbtn {
+  display: none;
+}
+
+/* news article */
+article.news {
   background: url('../img/news_background.jpg') no-repeat 0 -200px;
-  opacity: .4;
+}
+
+.background_shader {
+  background-color: rgba(0, 0, 0, 0.8);
   height: inherit;
+  color: #fff;
+}
+
+.news_container {
+  width: 50%;
+  margin: auto;
+  align-items: center;
+  display: flex;
+  width: 500px;
+  overflow: hidden;
+}
+
+.news_container .content{
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 16px;
+  position:relative;
+  left: 0px;
+}
+
+.news_container .content h1 {
+  text-align: center;
+  font-family: "lato";
+  margin: 0;
+  padding: 0;
+}
+
+.news_container .content h1, .news_container .content p {
+  width: 500px;
+  overflow: hidden;
 }
 
 /* Footer flexbox*/
