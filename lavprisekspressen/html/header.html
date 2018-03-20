@@ -6,6 +6,8 @@
     <link href="./css/style.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="../scripts/script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto" rel="stylesheet">
+
 
     </script>
   </head>
@@ -23,25 +25,25 @@
 
         <nav id="topics">
           <ul>
-            <!-- <li class="dropdown"> -->
             <li class="dropdown">
-              <!-- <button id="loginbtn" class="dropbtn">Logg Inn</button> -->
               <button id="loginbtn">Logg Inn</button>
                 <div id="login_drop">
                   <form id="login_form" action="../php/login.php" method="post">
                       <input type="email" placeholder="E-post addresse" name="email">
                       <input type="password" placeholder="Passord" name="passwd">
-                      <input id="btn1" type="submit" value="Logg Inn">
+                      <input id="btn1" type="submit" value="Logg Inn"><br>
+                      <p>Opprett Konto</p>
                   </form>
-                  <button id="rbtn">Registrer</button>
+                  <!-- <button id="rbtn">Registrer</button> -->
 
                   <form id="registration_form" action="../php/register.php" method="post">
                     <input type="text" placeholder="Brukernavn" name="uname">
                     <input type="email" placeholder="E-post addresse" name="email">
                     <input type="password" placeholder="Passord" name="passwd">
                     <input id="btn2" type="submit" value="Registrer">
+                    <p>Allerede registrert? Logg Inn</p>
                   </form>
-                  <button id="lbtn">Logg Inn</button>
+                  <!-- <button id="lbtn">Logg Inn</button> -->
                 </div>
             </li>
             <li><a href="?page=rutetider">Rutetider</a></li>

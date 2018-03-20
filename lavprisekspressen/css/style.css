@@ -34,7 +34,7 @@ footer {
   border-top: orange 3px solid;
 }
 
-h3, p{
+h1, h2, h3, h4, h5, h6, p{
   margin: 0;
   padding: 0;
 }
@@ -127,6 +127,7 @@ li.dropdown {
   font-size: 16px;
   height: 44px;
   font: 15px/1.5 Arial, Helvetica, sans-serif;
+  cursor: pointer;
 }
 
 #login_form, #registration_form {
@@ -167,21 +168,39 @@ li.dropdown {
   display: none;
 }
 
+section {
+  overflow: auto;
+}
+
+/*  Sidebar */
+.sidebar .container {
+  color: #fff;
+  background-color: #f37221;
+  padding: 10px 15px;
+  width: 20%;
+  float: right;
+}
+
+.sidebar .container .image_container {
+  text-align: center;
+}
+
 /* news article */
 article.news {
   background: url('../img/news_background.jpg') no-repeat 0 -200px;
 }
 
 .background_shader {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 35, 0.8);
   height: inherit;
   color: #fff;
+  /* text-shadow: 2px 2px 2px #000; */
 }
 
 .news_container {
   width: 50%;
   margin: auto;
-  align-items: center;
+   align-items: center;
   display: flex;
   width: 500px;
   overflow: hidden;
@@ -191,7 +210,7 @@ article.news {
   font-family: "Roboto";
   font-weight: 400;
   font-size: 16px;
-  position:relative;
+  position: relative;
   left: 0px;
 }
 
@@ -205,6 +224,60 @@ article.news {
 .news_container .content h1, .news_container .content p {
   width: 500px;
   overflow: hidden;
+}
+
+.leftbtn_container {
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+  transform: rotate(180deg);
+  float:left;
+  margin: 120px 0;
+  position: relative;
+  left: 20%;
+  cursor: pointer;
+}
+
+.rightbtn_container {
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+  float: right;
+  margin: 120px 0;
+  position: relative;
+  left: -20%;
+  cursor: pointer;
+}
+
+#rightbtn {
+  position: relative;
+  left: -142.5px;
+  height: 200px;
+}
+
+#leftbtn {
+  position: relative;
+  left: -142.5px;
+  height: 200px;
+}
+
+.dot_container {
+  display:inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+.dot {
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  display: inherit;
+  cursor: pointer;
+}
+
+.dot:first-child {
+  background-color: orange;
 }
 
 /* Footer flexbox*/

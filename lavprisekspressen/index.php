@@ -1,27 +1,14 @@
 <?php
+  require_once('./php/do_not_open_password_inside.php');
   require_once('./html/header.html');
+  require_once('./html/sidebar.html');
 
-  if (!isset($_GET["page"])) {
-    header("location: ?page=home");
+  if (!isset($_GET["id"])) {
+    header("location: ?id=1");
   }
-  switch ($_GET["page"]) {
-    case 'home':
-      require_once 'php/home.php';
-      break;
+  $pageNumber = $_GET["id"];
+  echo $pageNumber;
 
-    case 'rutetider':
-      require_once 'php/rutetider.php';
-      break;
-
-    case 'info':
-      require_once 'php/info.php';
-      break;
-
-    default:
-      echo "404 Page not found!";
-      break;
-  }
-
-  require_once './php/news.php';
-  require_once './html/footer.html';
+  require_once('./php/news.php');
+  require_once('./html/footer.html');
 ?>

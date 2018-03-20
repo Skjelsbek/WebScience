@@ -1,23 +1,31 @@
 <?php
-	$host = 'localhost';
-	$name = 'root';
-	$pass = '';
-	$db = 'lavprisekspressen';
-
-	$mysqli = new mysqli($host,$name,$pass,$db);
+	require_once('do_not_open_password_inside.php');
 
 	$email = $_POST['email'];
 	$pw = $_POST['passwd'];
 
-	$sql = "SELECT passwd FROM users WHERE email = '$email'";
+	$sql = "SELECT salt, passwd FROM users WHERE email = '$email'";
 	$result = $mysqli->query($sql);
-	$realPw = $result->fetch_assoc()["passwd"];
-	if($realPw == $pw)
+
+	if (isset($result))
 	{
-		header("Location: ../?page=home");
+		$result = $result->fetch_assoc();
+		$salt = $result["salt"];
+		$passwd = $result["passwd"];
+
+		$hPW = crypt($pass, $salt);
+
+		if($hPW == $passwd)
+		{
+			header("Location: ../?page=home");
+		}
+		else
+		{
+			echo 'Wrong pw!';
+		}
 	}
 	else
 	{
-		echo 'Wrong pw!';
+		echo 'Wrong username!';
 	}
 ?>

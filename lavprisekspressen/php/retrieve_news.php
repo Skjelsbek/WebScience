@@ -1,22 +1,25 @@
-<?php
-  $host = 'localhost';
-  $name = 'root';
-  $pass = '';
-  $db = 'lavprisekspressen';
-
-  $mysqli = new mysqli($host,$name,$pass,$db);
-
+  <?php
+  require_once('do_not_open_password_inside.php');
+  
   $sql = "SELECT * FROM news";
   $result = $mysqli->query($sql);
 
-  while ($row = $result->fetch_assoc()) {
-    echo "<div class=\"content\">";
-    echo "<h1>";
-    echo utf8_encode($row["heading"]);
-    echo "</h1>";
-    echo "<p>";
-    echo utf8_encode($row["content"]);
-    echo "</p>";
-    echo "</div>";
+  $i = 0;
+  while ($row = $result->fetch_assoc())
+  {
+    $array[$i] =
+    "<div class=\"content\"><h1>"
+    . utf8_encode($row["heading"])
+    . "</h1><p>"
+    . utf8_encode($row["content"])
+    . "</p></div>";
+    $i++;
   }
+
+  for ($j = 0; $j < $i; $j++)
+  {
+    echo $array[$j];
+  }
+
+  echo $array[0];
 ?>
