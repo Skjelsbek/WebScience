@@ -7,16 +7,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="../scripts/script.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lato|Roboto" rel="stylesheet">
-
-
-    </script>
   </head>
 
   <body>
     <header>
       <div class="container">
         <div id="branding">
-          <a href="?page=home">
+          <a href="?id=1">
             <h1>
               <span id="highlight">Lavpris</span>ekspressen
             </h1>
@@ -29,34 +26,33 @@
               <button id="loginbtn">Logg Inn</button>
                 <div id="login_drop">
                   <form id="login_form" action="../php/login.php" method="post">
-                      <input type="email" placeholder="E-post addresse" name="email">
-                      <input type="password" placeholder="Passord" name="passwd">
-                      <input id="btn1" type="submit" value="Logg Inn"><br>
-                      <p>Opprett Konto</p>
+                    <input type="email" placeholder="E-post addresse" name="email">
+                    <input type="password" placeholder="Passord" name="passwd">
+                    <input id="btn1" type="submit" value="Logg Inn">
+                    <p id="create_account">Opprett Konto</p>
+                    <p>Glemt Passord</p>
                   </form>
-                  <!-- <button id="rbtn">Registrer</button> -->
 
                   <form id="registration_form" action="../php/register.php" method="post">
                     <input type="text" placeholder="Brukernavn" name="uname">
                     <input type="email" placeholder="E-post addresse" name="email">
                     <input type="password" placeholder="Passord" name="passwd">
                     <input id="btn2" type="submit" value="Registrer">
-                    <p>Allerede registrert? Logg Inn</p>
+                    <p id="log_in">Har du allerede bruker? Logg Inn</p>
                   </form>
-                  <!-- <button id="lbtn">Logg Inn</button> -->
                 </div>
             </li>
-            <li><a href="?page=rutetider">Rutetider</a></li>
+            <li><a href="?id=2">Rutetider</a></li>
             <li class="dropdown">
-              <a class="dropbtn" href="?page=info">Info</a>
+              <a class="dropbtn">Info</a>
               <div class="drop-content">
-                <a href="?page=reisevilkår">Reisevilkår</a>
-                <a href="?page=bagasje">Bagasje</a>
-                <a href="?page=plassgaranti">Plassgaranti</a>
-                <a href="?page=om_oss">Om oss</a>
-                <a href="?page=q&a">Q&A</a>
-                <a href="?page=reiseguider">Reiseguider</a>
-                <a href="?page=våre_busser">Våre busser</a>
+                <a href="?id=3">Reisevilkår</a>
+                <a href="?id=4">Bagasje</a>
+                <a href="?id=5">Plassgaranti</a>
+                <a href="?id=6">Om oss</a>
+                <a href="?id=7">Q&A</a>
+                <a href="?id=8">Reiseguider</a>
+                <a href="?id=9">Våre busser</a>
               </div>
             </li>
           </ul>

@@ -27,14 +27,14 @@ $(document).ready(function(){
       }
     });
 
-    $("#rbtn").click(function(){
+    $("#create_account").click(function(){
       $('#login_form').css("display", "none");
       $('#registration_form').css("display","block");
       $('#rbtn').css("display", "none");
       $('#lbtn').css("display", "block");
     });
 
-    $('#lbtn').click(function(){
+    $('#log_in').click(function(){
       $('#login_form').css("display", "block");
       $('#registration_form').css("display", "none");
       $('#rbtn').css("display", "block");
