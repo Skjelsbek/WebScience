@@ -1,4 +1,6 @@
 <?php
+	session_start();
+
 	require_once('do_not_open_password_inside.php');
 
 	$email = $_POST['email'];
@@ -13,19 +15,20 @@
 		$salt = $result["salt"];
 		$passwd = $result["passwd"];
 
-		$hPW = crypt($pass, $salt);
-
-		if($hPW == $passwd)
+		$hPW1 = crypt($pw, $salt);
+		
+		if($hPW1 == $passwd)
 		{
-			header("Location: ../?page=home");
+			$_SESSION['email'] = $email;
+			header("Location: ../?id=1&login=success");
 		}
 		else
 		{
-			echo 'Wrong pw!';
+			header("Location: ../?id=1&login=failure");
 		}
 	}
 	else
 	{
-		echo 'Wrong username!';
+		header("Location: ../?id=1&login=failure");
 	}
 ?>
